@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VITARAN - Track Trucks</title>
+    <link rel="stylesheet" href="/css/vitaran.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="/images/vitaranLogo.png" alt="VITARAN Logo">
+                <h1>VITARAN</h1>
+            </div>
+            <nav>
+                <ul class="menu">
+                    <li class="active"><a href="/pages/vitaran.html"><img src="/images/home.png" alt="Dashboard Icon"> Dashboard</a></li>
+                    <li><a href="/pages/TrackTruck.html"><img src="/images/cargo-truck.png" alt="Truck Locations Icon"> Truck Locations</a></li>
+                    <li><a href="/pages/TrackParcel.html"><img src="/images/logistics (1).png" alt="Parcels Location Icon"> Parcels Location</a></li>
+                    <li><a href="/pages/OurPartners.html"><img src="/images/handshake.png" alt="Our Partners Icon"> Our Partners</a></li>
+                    <li><a href="#"><img src="/images/user.png" alt="Manage Users Icon"> Manage Users</a></li>
+                </ul>
+                <ul class="settings">
+                    <li><a href="#"><img src="/images/add-user.png" alt="Add Account Icon"> Add Account</a></li>
+                    <li><a href="#"><img src="/images/settings.png" alt="Settings Icon"> Settings</a></li>
+                    <li><a href="/pages/login.html"><img src="/images/logout.png" alt="Log Out Icon"> Log Out</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="main-content2">
+            <div class="header">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search Here">
+                </div>
+                <div class="user-info">
+                    <img src="/images/account.png" alt="User Icon">
+                    <div>
+                      <span class="username">Claudia Alves</span>
+                      <span>Administrator</span>
+                    </div>
+                  </div>
+                  
+            </div>
+            <section class="tracking-section">
+                
+                <div class="tracking-form">
+                    <h2>Track Trucks Here</h2>
+                    <form action="/pages/TruckLocation.html" method="GET" onsubmit="return validateForm()">
+                      <div class="form-group"> <label for="truck-id">Enter truck ID:</label> 
+                        <input type="text" id="truck-id" name="truck-id" oninput="toggleFields()" > </div> 
+                        <div class="form-group"> <label for="from">From:</label> 
+                            <input type="text" id="from" name="from" oninput="toggleFields()"> </div>
+                             <div class="form-group"> <label for="to">To:</label> 
+                                <input type="text" id="to" name="to" oninput="toggleFields()" > </div>
+                        <button type="submit">ENTER</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script> 
+    function toggleFields()
+     { var truckId = document.getElementById('truck-id').value.trim(); 
+       var from = document.getElementById('from').value.trim(); 
+       var to = document.getElementById('to').value.trim(); 
+       if (truckId) { document.getElementById('from').disabled = true; 
+       document.getElementById('to').disabled = true; 
+    } 
+    else { document.getElementById('from').disabled = false;
+     document.getElementById('to').disabled = false; } 
+     if (from || to) { document.getElementById('truck-id').disabled = true; } 
+     else { document.getElementById('truck-id').disabled = false; } 
+    } 
+    function validateForm()
+     { var truckId = document.getElementById('truck-id').value.trim();
+      var from = document.getElementById('from').value.trim(); 
+      var to = document.getElementById('to').value.trim(); 
+      if (!truckId && (!from || !to)) { alert('Please enter either the truck ID or both "From" and "To" fields.'); return false; }
+       return true; }
+    
+    </script>
+</body>
+</html>

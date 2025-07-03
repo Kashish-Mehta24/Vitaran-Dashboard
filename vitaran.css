@@ -1,0 +1,463 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+  }
+  .container {
+    display: flex;
+    width: 100%;
+  }
+  
+.sidebar {
+    width: 250px;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* height: 100vh; */
+    padding: 20px;
+    box-sizing: border-box; 
+    border-radius: 5px;
+ }
+  
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+.logo img {
+    width: 70px;
+    margin-right: 10px;
+}
+  
+.menu, .settings {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: black;
+}
+  
+.menu li, .settings li {
+    padding: 15px 0;
+    align-items: center;
+   
+}
+  
+  
+.menu li.active, .menu li a:hover, .settings li a:hover {
+    color: #00aaff;
+}
+  
+.menu li a:hover, .settings li a:hover {
+    border: 1px solid #00aaff;
+    background-color: #333333;
+}
+  
+.menu li a img, .settings li a img { margin-right: 10px;
+     width: 20px; 
+     height: 20px; }
+.menu li a, .settings li a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    width:100%;
+    padding: 10px;
+}
+  
+.main-content {
+    flex: grow 1;
+    background-color: #f4f4f4;
+    padding: 20px 10px 20px 00px;
+}
+    /* margin-left: 250px; Adjust for sidebar width
+  */
+  
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: fixed;
+    width: calc(100% - 250px); /* Adjust for sidebar width */
+    top: 0;
+    z-index: 1000;
+    height: 60px;
+    border-radius:10px ;
+}
+  
+.header .search-bar {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    border-radius: 100px;
+}
+  
+.search-bar input {
+    width: 600px; /* Adjust width here */
+    padding: 5px;
+     border: 1px solid black; /* Adjust border color here */ 
+     border-radius: 10px; 
+     background-color: black; /* Adjust background color here */
+      color: white;
+}
+  
+.user-info { display: flex; 
+    align-items: center; /* Align items horizontally */
+     margin-right: 50px; } 
+.user-info span { display: block;
+       text-align: right; /* Align text to the left */ } 
+.user-info .username { display: block; /* Make it a block element to stack vertically */
+    font-weight: bolder;
+         margin-bottom: 2px; } 
+.user-info img { border-radius: 50%; 
+          width: 30px; 
+          height: 30px;
+           margin-right: 10px; /* Add space between the icon and text */ 
+          }
+.content {
+    margin-top: 70px; /* Adjust for header height */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px 10px 20px 10px;
+}
+  
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: calc(33.333% - 20px); /* Three columns layout with gap */
+    box-sizing: border-box;
+    justify-content: center;
+    text-align: center;
+  }
+.card-trucks{
+    width:450px;
+    background-color: #d6d6d6;
+    border-radius: 3%;
+    justify-content: center;
+    text-align: center;
+    
+  }
+.card-trucks img{
+    margin-left: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    border-radius: 3%;
+}
+.card-parcels{
+    
+    background-color: #d6d6d6;
+    border-radius: 3%;
+    justify-content: center;
+    text-align: center;
+    
+}
+.card-parcels img{
+    height:250px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    border-radius: 3%;
+}
+.card-partners{
+    
+    background-color: #d6d6d6;
+    border-radius: 3%;
+    justify-content: center;
+    text-align: center;
+}
+.card-partners img{
+    
+    margin-left: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    border-radius: 3%;
+}
+.card-reports{
+    background-color: #d6d6d6;
+    border-radius: 3%;
+    justify-content: center;
+    text-align: center;
+}
+.card-reports img{
+    height:200px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    border-radius: 3%;
+}
+  
+  /*.card img {
+    max-width: 100%;
+    border-radius: 10px;
+    
+  }*/
+  
+  
+.card.full-width {
+    width: calc(100% - 20px); /* Full width for wider cards */
+}
+  
+  /* Specific card styling */
+.card.truck-locations {
+    order: 1;
+}
+  
+.card.parcels-location {
+    order: 2;
+}
+  
+.card.our-partners {
+    order: 3;
+}
+  
+.card.reports {
+    order: 4;
+    width: 100%;
+}
+
+  /*2nd page vit3-2*/
+.main-content2{
+    flex-grow: 1;
+                      background-image: url("/images/truckRoute.png"); /* Specify the path to your background image */
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    margin-left: 0px;
+                    padding: 20px 10px 20px 0px;
+                    }
+            .tracking-section {
+               margin-left: 550px;
+              background-color:black;  
+              width:300px;
+               
+              border-radius: 10px;
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+              padding: 20px;
+              text-align: center;
+              margin-top: 80px;
+              
+              
+            }
+            .tracking-section h2 { margin-bottom: 20px;}
+            
+            .tracking-form {
+              color: white;
+              text-align: center;
+      width: 100%;
+      max-width: 400px;
+      
+            }
+            
+            .tracking-form label {
+              margin: 10px 0 5px 0;
+              font-weight: bold;
+            }
+            .tracking-form .form-group { margin-bottom: 15px; width: 100%; max-width: 400px; display: flex; flex-direction: column; align-items: flex-start; }
+            
+            .tracking-form input {
+              padding: 10px;
+              border: 1px solid #ccc;
+              border-radius: 4px;
+              width: 100%;
+              max-width: 400px;
+              margin-bottom: 10px;
+            }
+            .tracking-form .form-button { display: flex; justify-content: center; /* Center the button */ width: 100%;}
+            
+            .tracking-form button {
+              padding: 10px 20px;
+              background-color:white;
+              color:black;
+              border: none;
+              border-radius: 4px;
+              cursor: pointer;
+              transition: background-color 0.3s;
+            }
+            
+            .tracking-form button:hover {
+              background-color: #0088cc;
+            }
+            /*vit5*/
+            .main-content3{
+                flex-grow: 1;
+                background-image: url("/images/parcelsImage2.png"); /* Specify the path to your background image */
+              background-position: center;
+              background-size: cover;
+              background-repeat: no-repeat;
+              margin-left: 0px;
+              padding: 20px 10px 20px 0px;
+              }
+              .tracking-section2 {
+                margin-left: 350px;
+               background-color: #38b6ff;  
+               width:300px;
+                
+               border-radius: 10px;
+               box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+               padding: 20px;
+               text-align: center;
+               margin-top: 80px;
+               
+               
+             }
+             .tracking-section2 h2 { margin-bottom: 20px;}
+             
+             .tracking-form2 {
+               text-align: center;
+       width: 100%;
+       max-width: 400px;
+             }
+             
+             .tracking-form2 label {
+               margin: 10px 0 5px 0;
+               font-weight: bold;
+             }
+             .tracking-form2 .form-group { margin-bottom: 15px; width: 100%; max-width: 400px; display: flex; flex-direction: column; align-items: flex-start; }
+             
+             .tracking-form2 input {
+               padding: 10px;
+               border: 1px solid #ccc;
+               border-radius: 4px;
+               width: 100%;
+               max-width: 400px;
+               margin-bottom: 10px;
+             }
+             .tracking-form2 .form-button { display: flex; justify-content: center; /* Center the button */ width: 100%;}
+             
+             .tracking-form2 button {
+               padding: 10px 20px;
+               background-color:white;
+               color:black;
+               border: none;
+               border-radius: 4px;
+               cursor: pointer;
+               transition: background-color 0.3s;
+             }
+             
+             .tracking-form2 button:hover {
+               background-color: #0088cc;
+             }
+
+             /*4th page real time tracking*/
+             .main-content4 {
+                flex-grow: 1;
+                background-color: #f4f4f4;
+                
+                 background-size: cover; /* Ensure the image covers the entire area */ 
+                 background-position: center; /* Center the image */
+                  background-repeat: no-repeat; /* Do not repeat the image */ padding: 20px 10px 20px 20px;
+                padding: 20px 10px 20px 0px;
+                }
+             .content-section {
+                margin-top: 50px;
+                padding: 20px;
+                flex-grow: 1;
+              }
+              
+              .content-section h1 {
+                
+                text-align: center;
+                margin-bottom: 20px;
+              }
+              
+              .map-container {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                gap: 10px;
+              }
+              
+              .map-container img {
+                width: 60%;
+                height: 400px;
+                border-radius: 10px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+              }
+              
+              /* Info Card Styling */
+              .info-card {
+                height:400px;
+                width: 37%;
+                padding: 20px;
+                background: linear-gradient(135deg, #38b6ff, #44489a);
+                border-radius: 10px;
+                color: white;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+              }
+              
+              .info-card h2 {
+                margin: 10px 0;
+                font-size: 16px;
+              }
+              
+              .info-card input {
+                width: 100%;
+                margin-bottom: 15px;
+                padding: 10px;
+                border: none;
+                border-radius: 5px;
+                outline: none;
+              }
+              
+              .info-card button {
+                width: 100%;
+                padding: 10px;
+                border: none;
+                border-radius: 5px;
+                background-color: white;
+                color: #0056ff;
+                font-size: 16px;
+                cursor: pointer;
+                margin-top: 30px;
+              }
+              
+              .info-card button:hover {
+                background-color: #e6e6e6;
+              }
+              /* ourPatrners*/
+              .main-content5{
+                flex-grow: 1;
+                background-image: url("/images/partnerImage2.png"); /* Specify the path to your background image */
+              background-position: center;
+              background-size: cover;
+              background-repeat: no-repeat;
+              padding: 20px 10px 20px 0px;
+              }
+          /* Partners Section */
+          .partners-section {
+            margin-top: 100px;
+            text-align: center;
+          }
+          
+          .partners-section h1 {
+            margin-bottom: 50px;
+            font-weight: 800;
+          }
+          
+          .partners-list {
+            display: grid;
+            justify-content: center;
+            gap: 50px;
+          }
+          
+          .partner-item {
+            width: 700px;
+            height: 40px;
+            background: #e8e8e8;
+            border: #333333 solid;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          }

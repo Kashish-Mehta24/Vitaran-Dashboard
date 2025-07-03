@@ -1,0 +1,192 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    height: 100vh;
+  }
+   
+  .container {
+    display: flex;
+    width: 100%;
+  }
+  
+  .sidebar {
+    width: 250px;
+    background-color: #2c2c2c;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .logo img {
+    width: 70px;
+    margin-right: 10px;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .menu li, .settings li {
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .menu li a, .settings li a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .menu li a img, .settings li a img {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+  }
+  
+  .menu li.active, .menu li a:hover, .settings li a:hover {
+    color: #00aaff;
+  }
+  
+  .menu li a:hover, .settings li a:hover {
+    border: 1px solid #00aaff;
+    background-color: #333333;
+  }
+  
+  .main-content {
+    flex-grow: 1;
+    background-color: #f4f4f4;
+    
+     background-size: cover; /* Ensure the image covers the entire area */ 
+     background-position: center; /* Center the image */
+      background-repeat: no-repeat; /* Do not repeat the image */ padding: 20px 10px 20px 20px;
+    padding: 20px 10px 20px 20px;
+  }
+  
+  
+          
+          
+          .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: fixed;
+            width: calc(100% - 250px); /* Adjust for sidebar width */
+            top: 0;
+            z-index: 1000;
+            height: 60px;
+            border-radius:10px ;
+          }
+          
+          .header .search-bar {
+            background-color: black;
+            display: flex;
+            align-items: center;
+          }
+          
+          .search-bar input {
+            width: 600px; /* Adjust width here */
+            padding: 5px;
+             border: 1px solid black; /* Adjust border color here */ 
+             border-radius: 10px; 
+             background-color: black; /* Adjust background color here */
+              color: white;
+          }
+          .user-info { display: flex; 
+            align-items: center; /* Align items horizontally */
+             margin-right: 50px; } 
+             .user-info span { display: block;
+               text-align: right; /* Align text to the left */ } 
+               .user-info .username { display: block; /* Make it a block element to stack vertically */
+                 margin-bottom: 2px; } 
+                 .user-info img { border-radius: 50%; 
+                  width: 30px; 
+                  height: 30px;
+                   margin-right: 10px; /* Add space between the icon and text */ 
+                  }
+                  .main-content3{
+                    flex-grow: 1;
+                    background-image: url("/images/parcelsImage2.png"); /* Specify the path to your background image */
+                  background-position: center;
+                  background-size: cover;
+                  background-repeat: no-repeat;
+                  margin-left: 4px;
+                  padding: 20px 10px 20px 20px;
+                  }
+          .tracking-section2 {
+             margin-left: 350px;
+            background-color: #38b6ff;  
+            width:300px;
+             
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            margin-top: 80px;
+            
+            
+          }
+          .tracking-section2 h2 { margin-bottom: 20px;}
+          
+          .tracking-form2 {
+            text-align: center;
+    width: 100%;
+    max-width: 400px;
+          }
+          
+          .tracking-form2 label {
+            margin: 10px 0 5px 0;
+            font-weight: bold;
+          }
+          .tracking-form2 .form-group { margin-bottom: 15px; width: 100%; max-width: 400px; display: flex; flex-direction: column; align-items: flex-start; }
+          
+          .tracking-form2 input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 100%;
+            max-width: 400px;
+            margin-bottom: 10px;
+          }
+          .tracking-form2 .form-button { display: flex; justify-content: center; /* Center the button */ width: 100%;}
+          
+          .tracking-form2 button {
+            padding: 10px 20px;
+            background-color:white;
+            color:black;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+          }
+          
+          .tracking-form2 button:hover {
+            background-color: #0088cc;
+          }
+          
